@@ -86,6 +86,7 @@ namespace PetrikKalandpark
 
         static void Palyavalaszto()
         {
+            Console.Clear();
             Console.WriteLine("=====KALANDPÁLYÁK======");
             Console.WriteLine("1.) Gyerekpálya");
             Console.WriteLine("2.) Erdei pálya");
@@ -95,56 +96,58 @@ namespace PetrikKalandpark
             int valasztas = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Magasság:");
             int magassag = Convert.ToInt32(Console.ReadLine());
-                switch (magassag)
+            switch (valasztas)
+            {
+                case 1:
                     {
-                    case 1:
+                        if (magassag >= 90)
                         {
-                            if (magassag < 90)
-                            {
-                                Console.WriteLine("Nem használhatod ezt a pályát!");
-                            break;
-                            }
-                            else
-                                    {
-                                Console.WriteLine("Használhatod ezt  a pályát! ");
-                                break;
-                            }
-                        }
-                    case 2:
-                        {
-                            if (magassag < 130)
-                            {
-                                Console.WriteLine("Nem használhatod ezt a pályát!");
-                            break;
-                            }
-                            else
-                            {
-                                Console.WriteLine("Használhatod ezt  a pályát! ");
-                            break ;
-                            }
-
-
+                            Console.WriteLine("Használhatod ezt  a pályát! ");
 
                         }
-                    case 3:
+                        else
                         {
-                            if (magassag < 160)
-                            {
-                                Console.WriteLine("Nem használhatod ezt a pályát!");
-                            break;
-                            }
-                            else
-                            {
-                                Console.WriteLine("Használhatod ezt  a pályát! ");
-                            break;
-                            }
+                            Console.WriteLine("Nem használhatod ezt a pályát!");
 
                         }
-                    default:
-                        {
-                            Console.WriteLine("Nincs ilyen pálya");
                         break;
+                    }
+                case 2:
+                    {
+                        if (magassag >= 130)
+                        {
+                            Console.WriteLine("Használhatod ezt  a pályát! ");
+
                         }
+                        else
+                        {
+                            Console.WriteLine("Nem használhatod ezt a pályát!");
+
+                        }
+
+                        break;
+
+
+                    }
+                case 3:
+                    {
+                        if (magassag >= 160)
+                        {
+                            Console.WriteLine("Használhatod ezt a pályát!");
+
+                        }
+                        else
+                        {
+                            Console.WriteLine("Nem használhatod ezt a pályát!");
+
+                        }
+                        break;
+                    }
+                default:
+                    {
+                        Console.WriteLine("Nincs ilyen pálya");
+                        break;
+                    }
 
 
             }
@@ -170,6 +173,8 @@ namespace PetrikKalandpark
         }
         static void KuponKalk()
         {
+            Console.Clear();
+            Console.WriteLine("======KUPON KALKUÁTOR=====");
             Console.WriteLine("A jegy eredeti ára");
             int ar = Convert.ToInt32(Console.ReadLine());
 
@@ -304,7 +309,7 @@ namespace PetrikKalandpark
                             Console.WriteLine();
 
                             Console.WriteLine(
-                                $"A kalandpark mai bevétele:: {bevetel} Ft"
+                                $"A kalandpark mai bevétele: {bevetel} Ft"
                             );
 
                             Console.ReadLine();
